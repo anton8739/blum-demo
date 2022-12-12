@@ -11,10 +11,10 @@ const Home = () => {
       <Button variant='pill'>Button</Button>
     </div>
   );
-}
+};
 export const getStaticProps = async ({ locale }) => ({
-    props: {
-        ...(await serverSideTranslations(locale, ['common'])),
-    },
+  props: {
+    ...(await serverSideTranslations(locale, ['common'])),
+  },
 });
-export default Home
+export default Home;

@@ -7,6 +7,6 @@ const App = ({ Component, pageProps }: any) => {
       <Component {...pageProps} />
     </ChakraProvider>
   );
-}
+};
 
 export default appWithTranslation(App);
