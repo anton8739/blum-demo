@@ -5,7 +5,7 @@ import Document, { Head, Html, Main, NextScript } from 'next/document';
 class Doc extends Document {
   render() {
     return (
-      <Html lang='en'>
+      <Html>
         <Head />
         <body>
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />

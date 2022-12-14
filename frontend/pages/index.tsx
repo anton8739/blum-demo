@@ -31,6 +31,9 @@ const Home = () => {
         <Link  href='/' locale={"zh"}>
           ZH
         </Link>
+        <Link  href='/' locale={"ar"}>
+          AR
+        </Link>
       </Box>
 
       {loading ? <Spinner /> : <PostList posts={data.posts.data}/>}
