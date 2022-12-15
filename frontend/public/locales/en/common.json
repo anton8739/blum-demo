@@ -1,3 +1,56 @@
 {
-  "title" : "Hello"
+  "lang" : "en",
+  "title" : "Hello",
+  "header" : {
+    "navbar" : {
+      "posts": "Posts"
+    },
+    "userMenu": {
+      "signIn" : "Sign In",
+      "signUp" : "Sign Up",
+      "logOut" : "Log out"
+    }
+  },
+  "home": {
+    "title" : "Welcome to blum"
+  },
+  "login" : {
+    "title" : "Welcome to Blum, Sing In",
+    "email" : {
+      "label" : "Email:",
+      "placeholder" : "Enter email"
+    },
+    "password" : {
+      "label" : "Password:",
+      "placeholder" : "Enter password"
+    },
+    "btn" : {
+      "submit" : "Sign In"
+    }
+  },
+  "registration" : {
+    "title" : "Welcome to Blum, Sing Up",
+    "username" : {
+      "label" : "User name:",
+      "placeholder" : "Enter username"
+    },
+    "email" : {
+      "label" : "Email:",
+      "placeholder" : "Enter email"
+    },
+    "password" : {
+      "label" : "Password:",
+      "placeholder" : "Enter password"
+    },
+    "btn" : {
+      "submit" : "Sign Up",
+      "signIn" : "Sign In"
+    },
+    "successMessage" : "Registration successfully complete. Conformation letter sended. Check your email"
+  },
+  "validation" : {
+    "required" : "Field is a required",
+    "emailType" : "Email should correct format",
+    "passwordType" : "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number"
+  }
 }

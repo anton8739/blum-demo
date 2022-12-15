@@ -12,27 +12,10 @@ const styles = {
 };
 
 const colors = {
-  brand: {
-    50: '#f6e8ff',
-    100: '#e3bdff',
-    200: '#cd94ff',
-    300: '#b46ef7',
-    400: '#9a4ce7',
-    500: '#7e31ce',
-    600: '#641eab',
-    700: '#4b1483',
-    800: '#341158',
-    900: '#1e0d2d',
-  },
-
   black: '#151515',
   text: '#151515',
-  textError: '#FF6262',
-  background: '#fff',
-  brandColorMain: '#00CCCC',
-  brandColorMain005: '#00CCCC0D',
-  brandColorMain01: '#00CCCC1A',
-  modalBackgraund: '#EFFFFF',
+  brandColorMain: '#FFFFFF',
+  brandColor1: '#DFFFFF',
   borderGray: '#1B1B1B4D',
 };
 
@@ -49,13 +32,21 @@ const components = {
       },
     },
   },
+  Alert: {
+    variants: {
+      toast: (P: any) => {
+        return {
+          title: P.title,
+          description: P.description,
+          status: P.description,
+          duration: 2000,
+          isClosable: false,
+        };
+      },
+    },
+  },
   Button: {
     variants: {
-      pill: props => ({
-        ...base.components.Button.variants.outline(props),
-        rounded: 'full',
-        color: 'gray.500',
-      }),
       blum: {
         w: 'max-content',
         backgroundColor: 'background',

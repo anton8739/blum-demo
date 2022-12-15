@@ -1,25 +1,36 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Layout from '@/components/common/Layout/Layout';
-import { getApolloClient } from '../src/core/apollo/client';
-import { CHECK_AUTH } from '../src/core/apollo/query';
-import { useState } from 'react';
+import Posts from '@/components/modules/Posts/Posts';
+import { useEffect, useState } from 'react';
 import { AppContext } from '../src/core/context';
+import { useRouter } from 'next/router';
+import { appRoutes } from '../src/core/constants';
+
 import { NextPage } from 'next';
 import { UserI } from '@/types/index';
+import { CHECK_AUTH } from '../src/core/apollo/query';
 import { getCookie } from 'cookies-next';
-import { useTranslation } from 'next-i18next';
+import { getApolloClient } from '../src/core/apollo/client';
+
 interface Props {
   auth: boolean;
   userData: UserI;
 }
 
-const HomePage: NextPage<Props> = ({ auth, userData }) => {
+const PostsPage: NextPage<Props> = ({ auth, userData }) => {
   const [user, setUser] = useState(userData);
   const [isAuth, setIsAuth] = useState(auth);
-  const { t } = useTranslation('common');
+  const router = useRouter();
+  useEffect(() => {
+    if (!isAuth) {
+      router.push(appRoutes.LOGIN);
+    }
+  }, [isAuth]);
   return (
     <AppContext.Provider value={{ user, setUser, isAuth, setIsAuth }}>
-      <Layout>{t('home.title')}</Layout>
+      <Layout>
+        <Posts />
+      </Layout>
     </AppContext.Provider>
   );
 };
@@ -41,6 +52,14 @@ export const getServerSideProps = async ({ locale, req, res }) => {
       console.log(e);
     }
   }
+  if (!auth) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: appRoutes.LOGIN,
+      },
+    };
+  }
   return {
     props: {
       auth: auth,
@@ -49,4 +68,4 @@ export const getServerSideProps = async ({ locale, req, res }) => {
     },
   };
 };
-export default HomePage;
+export default PostsPage;

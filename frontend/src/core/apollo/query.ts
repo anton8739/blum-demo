@@ -21,3 +21,20 @@ export const GET_POSTS = gql`
     }
   }
 `;
+export const CHECK_AUTH = gql`
+  query me {
+    me {
+      id
+      username
+      email
+      confirmed
+      blocked
+      role {
+        id
+        name
+        description
+        type
+      }
+    }
+  }
+`;

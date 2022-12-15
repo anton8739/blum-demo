@@ -1,3 +1,57 @@
 {
-  "title" : "標題"
+  "lang" : "zh",
+  "title" : "標題",
+  "header" : {
+    "navbar" : {
+      "posts": "帖子"
+    },
+    "userMenu": {
+      "signIn" : "登入",
+      "signUp" : "報名",
+      "logOut" : "登出"
+    }
+  },
+  "home": {
+    "title" : "歡迎來到百隆"
+  },
+  "login" : {
+    "title" : "歡迎來到 Blum，唱進",
+    "email" : {
+      "label" : "電子郵件：",
+      "placeholder" : "輸入電子郵件"
+    },
+    "password" : {
+      "label" : "密碼：",
+      "placeholder" : "輸入密碼"
+    },
+    "btn" : {
+
+      "submit" : "登入"
+    }
+  },
+  "registration" : {
+    "title" : "歡迎來到百隆，唱起來",
+    "username" : {
+      "label" : "用戶名：",
+      "placeholder" : "輸入用戶名"
+    },
+    "email" : {
+      "label" : "電子郵件：",
+      "placeholder" : "輸入電子郵件"
+    },
+    "password" : {
+      "label" : "密碼：",
+      "placeholder" : "輸入密碼"
+    },
+    "btn" : {
+      "submit" : "報名",
+      "signIn" : "登入"
+    },
+    "successMessage" : "註冊成功完成。確認函已發送。查看你的郵件。"
+  },
+  "validation" : {
+    "required" : "必填字段",
+    "emailType" : "電子郵件格式應正確",
+    "passwordType" : "必須包含 8 個字符，一個大寫字母，一個小寫字母，一個數字"
+  }
 }

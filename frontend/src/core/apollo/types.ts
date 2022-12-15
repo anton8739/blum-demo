@@ -1,7 +1,19 @@
-import {PostI} from "../../types";
+import { PostI, UserI } from '../../types';
 
 export interface GetPostsResponse {
-    posts: {
-        data: PostI[]
-    }
+  posts: {
+    data: PostI[];
+  };
+}
+export interface LoginResponse {
+  login: {
+    jwt: string;
+    user: UserI;
+  };
+}
+export interface RegistrationResponse {
+  register: {
+    jwt: string;
+    user: UserI;
+  };
 }

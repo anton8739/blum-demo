@@ -12,6 +12,7 @@ const App = ({ Component, pageProps }: any) => {
   useEffect(() => {
     document.documentElement.dir = dir;
   }, [dir]);
+
   return (
     <ApolloProvider client={client}>
       <ChakraProvider theme={theme}>
