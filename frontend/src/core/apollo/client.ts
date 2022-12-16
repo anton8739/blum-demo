@@ -5,7 +5,7 @@ import { getCookie, removeCookies, deleteCookie } from 'cookies-next';
 
 export const getApolloClient = (ssr: boolean, req?: any, res?: any) => {
   const httpLink = createHttpLink({
-    uri: process.env.APOLLO_CLIENT_URI,
+    uri: process.env.NEXT_PUBLIC_APOLLO_CLIENT_URI,
   });
 
   const authLink = setContext((_, { headers }) => {
