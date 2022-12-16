@@ -17,6 +17,7 @@
     "@strapi/provider-email-nodemailer": "^4.5.4",
     "@strapi/strapi": "4.5.3",
     "better-sqlite3": "7.4.6",
+    "pg": "^8.8.0",
     "strapi-provider-email-smtp": "^1.0.3"
   },
   "author": {
